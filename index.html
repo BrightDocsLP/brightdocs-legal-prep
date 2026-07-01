@@ -25,13 +25,26 @@
             <a href="index.html">
                 <img class="logo" src="images/Logo_Light.svg" alt="BrightDocs Legal Prep, LLC logo">
             </a>
-            <nav>
+        
+            <button id="menuBtn" aria-label="Open navigation" aria-controls="siteNav" aria-expanded="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 6h18M3 12h18M3 18h18"></path>
+                </svg>
+            </button>
+        
+            <nav id="siteNav" aria-label="Main navigation">
+                <button id="closeBtn" aria-label="Close navigation">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 6l12 12M18 6L6 18"></path>
+                    </svg>
+                </button>
+        
                 <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services-pricing.html">Services/Pricing</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="index.html"aria-current="page">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services-pricing.html">Services/Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
                 </ul>
             </nav>
         </header>
@@ -101,5 +114,6 @@
         
             <p>&copy; 2026 BrightDocs Legal Prep, LLC. All rights reserved.</p>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>

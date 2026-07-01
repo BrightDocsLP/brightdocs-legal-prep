@@ -47,9 +47,320 @@ table {
 	border-spacing: 0;
 }
 
+:root {
+    --off-white: #F5F5F5;
+    --yellow: #F6E5A5;
+    --black: #1A1A1A;
+    --blue: #1C5287;
+    --white: #FAFAF5;
+    --grey: #D9D9D9;
+}
+body{
+	line-height: 1.5;
+}
+
+header {
+    background-color: var(--off-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
 .logo {
-    width: 250px;
+    width: 150px;
     max-width: 100%;
     height: auto;
     display: block;
 }
+
+h1 {
+    font-size: 36px;
+    color: var(--blue);
+	line-height: 1.1;
+}
+
+p, li{
+	line-height: 1.5;
+}
+
+main section p{
+	font-size: 1rem;
+
+}
+#hero p{
+	font-size: 24px;
+	padding-left: 2.5rem;
+	line-height: 1.2;
+}
+
+#intro{
+	background-color: var(--blue);
+	color: var(--white);
+}
+main section {
+    padding: 1rem 1.5rem;
+}
+
+section h2 {
+    margin-bottom: .5rem;
+}
+
+section p {
+    margin-bottom: .5rem;
+}
+
+#intro a{
+	display: inline-block;
+    margin-top: .5rem;
+	text-decoration: none;
+	color: var(--blue);
+	background-color: var(--white);
+	padding: 8px 16px;
+	border-radius: 20px;
+	margin-left: .75rem;
+}
+
+main ol {
+    list-style-type: decimal;
+    padding-left: 2rem;
+	padding-right: .75rem;
+
+}
+
+
+
+
+
+
+
+
+
+#menuBtn,
+#closeBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menuBtn svg,
+#closeBtn svg {
+    width: 32px;
+    height: 32px;
+    stroke: var(--black);
+    stroke-width: 2.5;
+    stroke-linecap: round;
+}
+
+#siteNav {
+    position: fixed;
+    inset: 0;
+    background-color: var(--off-white);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.28s ease, opacity 0.28s ease;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#siteNav.open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#siteNav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+#siteNav a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+#siteNav a[aria-current="page"] {
+    background-color: var(--black);
+    color: var(--yellow);
+    padding: 4px;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+h2{
+	background-color: var(--yellow);
+	line-height: 1.2;
+	font-size: 24px;
+	padding-left:1rem;
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+}
+
+
+
+main section p, main section h2, main section h1, main section a {
+    padding-left: .75rem;
+    padding-right: .75rem;
+}
+
+main section ul{
+    list-style-type: disc;
+    padding-left: 2rem;
+	padding-right: .75rem;
+}
+
+main ul li, main ol li {
+    margin-bottom: .5rem;
+}
+
+/* ===== Services/Pricing Accordions ===== */
+
+.pricing-category h2 {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+/* Hide default details arrow */
+.pricing-group summary {
+    list-style: none;
+}
+
+.pricing-group summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Accordion clickable row */
+.pricing-group summary {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    color: var(--blue);
+    background-color: transparent;
+
+    cursor: pointer;
+    font-weight: 700;
+
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+
+    transition: color 0.2s ease;
+}
+
+/* Divider line */
+.pricing-group summary::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 1px;
+    background-color: var(--grey);
+
+    transition: background-color 0.25s ease;
+}
+
+/* Custom chevron */
+.pricing-group summary::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+
+    border-right: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
+
+    transform: rotate(45deg);
+    transition:
+        transform 0.25s ease,
+        border-color 0.2s ease;
+
+    flex-shrink: 0;
+}
+
+/* Hover state */
+.pricing-group summary:hover {
+    color: #153D66;
+}
+
+.pricing-group summary:hover::before {
+    background-color: var(--blue);
+}
+
+.pricing-group summary:hover::after {
+    border-color: var(--blue);
+}
+
+/* Open state */
+.pricing-group[open] summary::before {
+    background-color: var(--blue);
+}
+
+.pricing-group[open] summary::after {
+    transform: rotate(-135deg);
+    border-color: var(--blue);
+}
+
+/* Keyboard focus */
+.pricing-group summary:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 4px;
+}
+
+/* Service list content */
+.service-list dt {
+    font-weight: 700;
+}
+
+.service-list dd {
+    line-height: 1.6;
+}
+
+/* Optional note styling */
+.fee-note {
+    font-style: italic;
+}
+
+
+@media (min-width: 768px) {
+    #menuBtn,
+    #closeBtn {
+        display: none;
+    }
+
+    #siteNav {
+        position: static;
+        transform: none;
+        opacity: 1;
+        background: none;
+        display: block;
+    }
+
+    #siteNav ul {
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    #siteNav a {
+        font-size: 1.2rem;
+    }
+}
+
