@@ -134,6 +134,10 @@ section p {
     margin-bottom: .5rem;
 }
 
+#key-services{
+    margin-top: .5rem;
+}
+
 #intro a{
 	display: inline-block;
     margin-top: .5rem;
@@ -143,6 +147,7 @@ section p {
 	padding: 8px 16px;
 	border-radius: 20px;
 	margin-left: .75rem;
+    margin-bottom: .5rem;
 }
 
 #services-cta{
@@ -170,6 +175,14 @@ section p {
 
     padding: 8px 16px;
     border-radius: 20px;
+}
+
+#contact-cta{
+    display:grid;
+}
+
+#contact-cta img{
+    padding-top: 1rem;
 }
 
 main ol {
