@@ -195,6 +195,9 @@ main ol {
 
 }
 
+#services-pricing-hero h1{
+    padding-bottom:1rem;
+}
 
 .pricing-note {
     margin-top: .5rem;
