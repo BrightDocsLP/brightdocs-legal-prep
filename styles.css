@@ -55,12 +55,38 @@ table {
     --yellow: #F6E5A5;
     --black: #1A1A1A;
     --blue: #1C5287;
+    --dark-blue: #153D66;
     --white: #FAFAF5;
     --grey: #D9D9D9;
     --light-blue: #73ABE2;
     --error-red: #C62828;
     
 }
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.company-name {
+    font-size: 1.4rem;
+    line-height: 1.1;
+}
+
+.company-name span {
+    display: block;
+}
+
+.brand-blue-dark {
+    color: var(--dark-blue);
+}
+
+.brand-blue-light {
+    color: var(--blue);
+}
+
 body{
 	line-height: 1.5;
     background-color: var(--off-white);
@@ -94,7 +120,7 @@ strong{
 }
 
 .logo {
-    width: 150px;
+    width: 75px;
     max-width: 100%;
     height: auto;
     display: block;
@@ -755,12 +781,12 @@ main ul li, main ol li {
 
     #siteNav ul {
         flex-direction: row;
-        gap: 1.5rem;
+        gap: 1rem;
         align-items: center;
     }
 
     #siteNav a {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     #home{
@@ -804,6 +830,12 @@ main ul li, main ol li {
 
 }
 
-@media screen and (min-width: 1400px){
-
+@media screen and (min-width: 900px){
+    .company-name span {
+        display: inline;
+    }
+    
+    .company-name {
+        white-space: nowrap;
+    }
 }
