@@ -834,9 +834,16 @@ main ul li, main ol li {
 @media screen and (min-width: 900px){
     .company-name span {
         display: inline;
+
     }
+    
     
     .company-name {
         white-space: nowrap;
+    }
+}
+@media screen and (min-width: 975px){
+    .company-name span {
+        font-size: 2rem;
     }
 }
