@@ -583,12 +583,14 @@ main ul li, main ol li {
 /* FAQ content */
 .faq-item p,
 .faq-item ul {
-    padding: 0.75rem;
+    padding: 0.75rem 0.75rem 0 0.75rem;
 }
+
 
 .faq-item li {
     line-height: 1.6;
     margin-bottom: 0.5rem;
+    margin-left: 1.5rem;
 }
 
 /* ===== Services/Pricing Accordions ===== */
