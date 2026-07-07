@@ -96,7 +96,7 @@ button,
 }
 
 .company-name {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.1;
 }
 
@@ -155,6 +155,7 @@ h1 {
     font-size: 36px;
     color: var(--blue);
 	line-height: 1.1;
+    font-weight: 500;
 }
 
 p, li{
@@ -168,7 +169,8 @@ main section p{
 #hero p{
 	font-size: 24px;
 	padding-left: 2.5rem;
-	line-height: 1.2;
+    font-weight:500;
+    line-height:1.3;
 }
 
 .hero-image {
@@ -243,10 +245,11 @@ section p {
 	text-decoration: none;
 	color: var(--blue);
 	background-color: var(--white);
-	padding: 8px 16px;
+	padding: 10px 22px;
 	border-radius: 20px;
 	margin-left: .75rem;
     margin-bottom: .5rem;
+    font-weight: 600;
 }
 
 #services-cta{
@@ -272,8 +275,9 @@ section p {
     color: var(--white);
     background-color: var(--blue);
 
-    padding: 8px 16px;
+    padding: 10px 22px;
     border-radius: 20px;
+    font-weight: 600;
 }
 
 #contact-cta{
@@ -512,7 +516,7 @@ main ol {
 #siteNav a {
     color: var(--black);
     text-decoration: none;
-    font-size: 2rem;
+    font-weight:400;
 }
 
 #siteNav a[aria-current="page"] {
@@ -532,6 +536,7 @@ h2{
 	padding-left:1rem;
 	padding-top: .75rem;
 	padding-bottom: .75rem;
+    font-weight: 600;
 }
 
 
@@ -899,29 +904,7 @@ main ul li, main ol li {
 }
 
 @media screen and (min-width: 768px) {
-    #menuBtn,
-    #closeBtn {
-        display: none;
-    }
-
-    #siteNav {
-        position: static;
-        transform: none;
-        opacity: 1;
-        background: none;
-        display: block;
-    }
-
-    #siteNav ul {
-        flex-direction: row;
-        gap: 1rem;
-        align-items: center;
-    }
-
-    #siteNav a {
-        font-size: 1.4rem;
-    }
-
+    
     #home{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -963,19 +946,54 @@ main ul li, main ol li {
 
 }
 
-@media screen and (min-width: 900px){
-    .company-name span {
-        display: inline;
+@media screen and (min-width: 860px){
+    #menuBtn,
+    #closeBtn {
+        display: none;
+    }
 
+    #siteNav {
+        position: static;
+        transform: none;
+        opacity: 1;
+        background: none;
+        display: block;
     }
-    
-    
-    .company-name {
-        white-space: nowrap;
+
+    #siteNav ul {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
     }
+
+    #siteNav a {
+        font-size: 1.4rem;
+    }
+
 }
+
+/*@media screen and (min-width: 900px){
+    
+}*/
 @media screen and (min-width: 975px){
     .company-name span {
-        font-size: 2rem;
+        font-size:1.75rem;
+        
+    }
+    #siteNav a {
+        font-weight:600;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #siteNav ul {
+        gap: 1.75rem;
+    }
+    .company-name span {
+        font-size:1.75rem;
+        display: inline;
+    }
+    .company-name {
+        white-space: nowrap;
     }
 }
