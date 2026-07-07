@@ -107,3 +107,22 @@ if (questionInput) {
     });
 
 }
+
+/* ==========================================
+   Navigation Hover Behavior
+========================================== */
+
+const siteNavLinks = document.querySelectorAll("#siteNav a");
+const currentPageLink = document.querySelector('#siteNav a[aria-current="page"]');
+
+if (currentPageLink) {
+
+    siteNav.addEventListener("mouseenter", function () {
+        currentPageLink.classList.add("current-inactive");
+    });
+
+    siteNav.addEventListener("mouseleave", function () {
+        currentPageLink.classList.remove("current-inactive");
+    });
+
+}
