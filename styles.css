@@ -145,6 +145,20 @@ main section p{
 	line-height: 1.2;
 }
 
+.hero-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.about-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
 #intro{
 	background-color: var(--blue);
 	color: var(--white);
