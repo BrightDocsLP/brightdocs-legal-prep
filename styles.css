@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -62,6 +65,31 @@ table {
     --error-red: #C62828;
     
 }
+body{
+    font-family: "Open Sans", Arial, sans-serif;
+    line-height: 1.5;
+    background-color: var(--off-white);
+}
+
+h1,
+h2,
+h3,
+#siteNav a,
+#hero p,
+summary,
+button,
+.cta a,
+#contact-cta a,
+#services-cta a,
+#intro a {
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+.company-name{
+    font-family: "warbler", serif;
+}
+
+
 
 .brand {
     display: flex;
