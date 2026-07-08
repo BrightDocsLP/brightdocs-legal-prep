@@ -452,6 +452,57 @@ main ol {
    Form Validation
 ========================== */
 
+/*fieldset part of form*/
+/* ===== Preferred Contact Method ===== */
+/* ===== Preferred Contact Method ===== */
+
+.contact-preference {
+    border: 3px solid var(--white);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0 0 1.5rem;
+    background-color: var(--black);
+}
+
+.contact-preference legend {
+    font-weight: 700;
+    color: var(--white);
+    padding: 0 .5rem;
+}
+
+.contact-preference legend span {
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+.contact-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: .75rem;
+}
+
+.contact-option {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contact-option input[type="radio"] {
+    width: auto;
+    margin: 0;
+    accent-color: var(--yellow);
+    cursor: pointer;
+}
+
+.contact-option:has(input:checked) {
+    color: var(--yellow);
+}
+
 .form-error {
     display: none;
     color: var(--error-red);
@@ -626,6 +677,22 @@ main section ul{
 
 main ul li, main ol li {
     margin-bottom: .5rem;
+}
+
+
+/*Calendly CSS Code*/
+#schedule-booking {
+    padding: 3rem 1rem;
+}
+
+.calendly-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 2rem auto 0;
+}
+
+.calendly-inline-widget {
+    width: 100%;
 }
 
 /* ===== Contact Page FAQ Accordions ===== */

@@ -156,13 +156,13 @@
 
             <p>If you would like to ask a question or get clarification before your consultation, please reach out using the form below. We're happy to help guide you toward the right service or provide general information about what to expect.</p>
 
-            <form action="#" method="post">
+            <form action="https://formspree.io/f/mnjkydjb" method="POST">
 
                 <label for="first-last-name">First and Last Name</label>
                 <input
                     type="text"
                     id="first-last-name"
-                    name="first-last-name"
+                    name="name"
                     placeholder="James Smith"
                     autocomplete="name"
                     pattern="^[A-Za-z'-]+\s+[A-Za-z'-]+.*$"
@@ -174,7 +174,7 @@
                 <input
                     type="email"
                     id="email-address"
-                    name="email-address"
+                    name="email"
                     placeholder="name@example.com"
                     autocomplete="email"
                     required>
@@ -184,7 +184,7 @@
                 <input
                     type="tel"
                     id="phone-number"
-                    name="phone-number"
+                    name="phone"
                     placeholder="123-456-7890"
                     autocomplete="tel"
                     maxlength="12"
@@ -193,15 +193,50 @@
                     required>
                 <p class="form-error">Please enter a valid phone number in the format 123-456-7890.</p>
             
+                <fieldset class="contact-preference">
+
+                    <legend>
+                        How should we contact you?
+                        <span>(Optional)</span>
+                    </legend>
+                
+                    <div class="contact-options">
+                
+                        <label class="contact-option" for="contact-phone">
+                            <input
+                                type="radio"
+                                id="contact-phone"
+                                name="preferred-contact"
+                                value="Phone">
+                
+                            <span>Phone</span>
+                        </label>
+                
+                        <label class="contact-option" for="contact-email">
+                            <input
+                                type="radio"
+                                id="contact-email"
+                                name="preferred-contact"
+                                value="Email">
+                
+                            <span>Email</span>
+                        </label>
+                
+                    </div>
+                
+                </fieldset>
+            
                 <label for="question-concern">Question or Concern</label>
                 <textarea
                     id="question-concern"
-                    name="question-concern"
+                    name="message"
                     rows="6"
                     minlength="12"
                     placeholder="Enter your question here..."
                     required></textarea>
                 <p class="form-error">Please enter at least 12 characters.</p>
+            
+                <input type="hidden" name="_subject" value="New BrightDocs Contact Form Submission">
             
                 <button type="submit">Submit</button>
             
