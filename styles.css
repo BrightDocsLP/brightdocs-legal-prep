@@ -465,15 +465,16 @@ main ol {
     box-shadow: 0 8px 20px rgba(0,0,0,.18);
 }
 
-.secondary-button:hover {
-    color: var(--white);
-    background-color: var(--blue);
+.primary-button:hover,
+.secondary-button:hover,
+#intro .secondary-button:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+    border-color: var(--black);
 }
 
-#intro .secondary-button:hover {
-    color: var(--blue);
-    background-color: var(--white);
-}
+
+
 
 
 /*Hover Settings for the Contact Form*/
