@@ -454,7 +454,6 @@ main ol {
 
 /*fieldset part of form*/
 /* ===== Preferred Contact Method ===== */
-/* ===== Preferred Contact Method ===== */
 
 .contact-preference {
     border: 3px solid var(--white);
@@ -471,6 +470,8 @@ main ol {
 }
 
 .contact-preference legend span {
+    display: block;
+    margin-top: .2rem;
     font-weight: 400;
     font-size: .9rem;
 }
@@ -479,52 +480,32 @@ main ol {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 0.75rem;
-}
-
-.contact-option {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    width: 100%;
-
-    color: var(--white);
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.contact-option input[type="radio"] {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-    margin: 0;
-    accent-color: var(--yellow);
-    cursor: pointer;
-}
-
-/*.contact-options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
     margin-top: .75rem;
 }
 
 .contact-option {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: .75rem;
+    width: fit-content;
 
     color: var(--white);
     font-weight: 700;
     cursor: pointer;
 }
 
-.contact-option input[type="radio"] {
-    width: auto;
+#contact-form-section .contact-option input[type="radio"] {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+
     margin: 0;
+    padding: 0;
+
+    border-radius: 50%;
     accent-color: var(--yellow);
     cursor: pointer;
-}*/
+}
 
 .contact-option:has(input:checked) {
     color: var(--yellow);
@@ -1005,10 +986,6 @@ h3{
     .contact-options {
         flex-direction: row;
         gap: 2rem;
-    }
-
-    .contact-option {
-        width: auto;
     }
 }
 
