@@ -81,7 +81,9 @@ button,
 .cta a,
 #contact-cta a,
 #services-cta a,
-#intro a {
+#intro a,
+.primary-button,
+.secondary-button {
     font-family: "Montserrat", Arial, sans-serif;
 }
 
@@ -247,18 +249,55 @@ section p {
     margin-top: .5rem;
 }
 
-#intro a{
-	display: inline-block;
+/* ===== Reusable Buttons ===== */
+
+.primary-button {
+    display: inline-block;
+    width: fit-content;
     margin-top: .5rem;
-	text-decoration: none;
-	color: var(--blue);
-	background-color: var(--white);
-	padding: 10px 22px;
-	border-radius: 20px;
-	margin-left: .75rem;
+    margin-left: .75rem;
     margin-bottom: .5rem;
+
+    text-decoration: none;
+    color: var(--blue);
+    background-color: var(--white);
+
+    border: none;
+    border-radius: 20px;
+    padding: 10px 22px;
+
     font-weight: 600;
 }
+
+.secondary-button {
+    display: inline-block;
+    width: fit-content;
+    margin-top: .5rem;
+    margin-left: .75rem;
+    margin-bottom: .5rem;
+
+    text-decoration: none;
+    color: var(--blue);
+    background-color: transparent;
+
+    border: 2px solid var(--blue);
+    border-radius: 20px;
+    padding: 8px 20px;
+
+    font-weight: 600;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#intro .secondary-button {
+    color: var(--white);
+    border-color: var(--white);
+}
+
 
 #services-cta{
     display:grid;
@@ -404,7 +443,9 @@ main ol {
 .cta a,
 #contact-cta a,
 #services-cta a,
-#intro a {
+#intro a,
+.primary-button,
+.secondary-button {
     transition:
         background-color .2s ease,
         color .2s ease,
@@ -415,11 +456,23 @@ main ol {
 .cta a:hover,
 #contact-cta a:hover,
 #services-cta a:hover,
-#intro a:hover {
+#intro a:hover,
+.primary-button:hover,
+.secondary-button:hover {
 
     transform: translateY(-2px);
 
     box-shadow: 0 8px 20px rgba(0,0,0,.18);
+}
+
+.secondary-button:hover {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+#intro .secondary-button:hover {
+    color: var(--blue);
+    background-color: var(--white);
 }
 
 
@@ -980,6 +1033,14 @@ h3{
 /* Optional note styling */
 .fee-note {
     font-style: italic;
+}
+
+@media screen and (min-width: 450px) {
+    .button-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
 }
 
 @media screen and (min-width: 500px) {
