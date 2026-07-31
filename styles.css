@@ -65,7 +65,13 @@ table {
     --error-red: #C62828;
     
 }
+html {
+    background-color: var(--off-white);
+}
+
 body{
+    width: 100%;
+    margin: 0;
     font-family: "Open Sans", Arial, sans-serif;
     line-height: 1.5;
     background-color: var(--off-white);
@@ -120,11 +126,6 @@ button,
 
 .brand-blue-light {
     color: var(--blue);
-}
-
-body{
-	line-height: 1.5;
-    background-color: var(--off-white);
 }
 
 header {
@@ -1011,6 +1012,22 @@ h3{
     font-style: italic;
 }
 
+#img2 img, #img1 img {
+    height: 90%;
+}
+/* ===== Centered Website Content ===== */
+
+header,
+main,
+footer {
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
 @media screen and (min-width: 450px) {
     .button-group {
         flex-direction: row;
@@ -1124,7 +1141,9 @@ h3{
         justify-content: center; /* Centers horizontally */
         align-items: center;     /* Centers vertically */
     }
-
+    #img2 img, #img1 img {
+        height: auto;
+    }
     #about-cindylou{
         grid-column: 1/2;
         grid-row: 2/3;
@@ -1181,6 +1200,18 @@ h3{
     }
 }
 
+@media screen and (min-width: 1100px) {
+
+    #img1 img{
+        height: 90%;
+    }
+
+    #img2 img {
+        height: 80%;
+    }
+
+}
+
 @media screen and (min-width: 1200px){
     #siteNav ul {
         gap: 1.75rem;
@@ -1192,4 +1223,15 @@ h3{
     .company-name {
         white-space: nowrap;
     }
+
+    #img2 img {
+        height: 85%;
+    }
+}
+
+@media screen and (min-width: 1325px) {
+    #img2 img {
+        height: 90%;
+    }
+
 }
