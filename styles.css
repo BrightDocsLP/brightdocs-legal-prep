@@ -249,42 +249,77 @@ section p {
     margin-top: .5rem;
 }
 
-/* ===== Reusable Buttons ===== */
+/* ===== Reusable Button System ===== */
 
-.primary-button {
-    display: inline-block;
-    width: fit-content;
-    margin-top: .5rem;
-    margin-left: .75rem;
-    margin-bottom: .5rem;
-
-    text-decoration: none;
-    color: var(--blue);
-    background-color: var(--white);
-
-    border: none;
-    border-radius: 20px;
-    padding: 10px 22px;
-
-    font-weight: 600;
-}
-
+.primary-button,
 .secondary-button {
     display: inline-block;
     width: fit-content;
+
     margin-top: .5rem;
     margin-left: .75rem;
     margin-bottom: .5rem;
 
+    border-radius: 20px;
+    padding: 10px 22px;
+
     text-decoration: none;
+    font-weight: 600;
+
+    transition:
+        background-color .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.primary-button {
+    color: var(--white);
+    background-color: var(--blue);
+    border: 2px solid transparent;
+
+/* Reduce padding by 2px so the overall size matches previous buttons */
+    padding: 8px 20px;
+}
+
+/* Keeps the established white primary button on the blue intro section. */
+#intro .primary-button {
+    color: var(--blue);
+    background-color: var(--white);
+}
+
+.secondary-button {
     color: var(--blue);
     background-color: transparent;
-
     border: 2px solid var(--blue);
-    border-radius: 20px;
-    padding: 8px 20px;
 
-    font-weight: 600;
+    /* Keeps the outside dimensions equal to the primary button. */
+    padding: 8px 20px;
+}
+
+/* Provides sufficient contrast against the blue intro background. */
+#intro .secondary-button {
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+#intro .primary-button:hover,
+#intro .secondary-button:hover {
+    color: var(--black);
+    background-color: var(--yellow);
+    border-color: var(--black);
+
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.18);
+}
+
+.primary-button:focus-visible,
+.secondary-button:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 3px;
 }
 
 .button-group {
@@ -293,10 +328,6 @@ section p {
     align-items: flex-start;
 }
 
-#intro .secondary-button {
-    color: var(--white);
-    border-color: var(--white);
-}
 
 
 #services-cta{
@@ -308,24 +339,6 @@ section p {
     padding: 1rem 0;
 }
 
-.cta a,
-#contact-cta a,
-#services-cta a {
-    display: inline-block;
-    width: fit-content;
-    justify-self: start;
-
-    margin-top: .5rem;
-    margin-left: .75rem;
-
-    text-decoration: none;
-    color: var(--white);
-    background-color: var(--blue);
-
-    padding: 10px 22px;
-    border-radius: 20px;
-    font-weight: 600;
-}
 
 #contact-cta{
     display:grid;
@@ -439,44 +452,6 @@ main ol {
     background-color: var(--blue);
     color: var(--white);
 }
-/*Hover Settings for the CTAs*/
-.cta a,
-#contact-cta a,
-#services-cta a,
-#intro a,
-.primary-button,
-.secondary-button {
-    transition:
-        background-color .2s ease,
-        color .2s ease,
-        transform .2s ease,
-        box-shadow .2s ease;
-}
-
-.cta a:hover,
-#contact-cta a:hover,
-#services-cta a:hover,
-#intro a:hover,
-.primary-button:hover,
-.secondary-button:hover {
-
-    transform: translateY(-2px);
-
-    box-shadow: 0 8px 20px rgba(0,0,0,.18);
-}
-
-.primary-button:hover,
-.secondary-button:hover,
-#intro .secondary-button:hover {
-    background-color: var(--yellow);
-    color: var(--black);
-    border-color: var(--black);
-}
-
-
-
-
-
 /*Hover Settings for the Contact Form*/
 #contact-form-section button {
 
